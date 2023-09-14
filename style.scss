@@ -29,7 +29,7 @@ html {
         align-items: center;
         width: 25rem;
         height: 25rem;
-        background-color: $clock-border-b600;
+        background-color: #bbc2bd;
     }
     .circle {
         display: flex;
@@ -41,6 +41,7 @@ html {
         border-radius: 50%;
         border: 0.5rem solid $background-b400;
         z-index: -2;
+        box-shadow: 0 1px 8px 1px $clock-face-b900;
     }
     .watch-face {
         display: flex;
