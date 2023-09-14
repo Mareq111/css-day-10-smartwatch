@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  color: #fcf5f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 25rem;
+  background-color: #5d5d5d;
+}
+html .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d2c2c;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 0.5rem solid #888888;
+  z-index: -2;
+}
+html .watch-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  border: dotted #fcf5f4 0.3rem;
+}
+html .spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 95%;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0.2rem solid #d6675d;
+  animation: spinnerz 12s linear infinite;
+  z-index: -1;
+}
+html .items-inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+html .day {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #e47ac5;
+}
+html #date {
+  color: #58ce0a;
+}
+html .time {
+  font-size: 3rem;
+  font-weight: 700;
+}
+html .puls-and-weather {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 1.25rem;
+}
+html .only-heart-puls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.25rem;
+}
+html #heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f56262;
+  font-size: 0.5rem;
+  height: 1.25rem;
+  animation: ease-in heart-beat 1300ms infinite;
+}
+html .puls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem 0 0.1rem;
+  font-size: 0.8rem;
+  align-self: center;
+  justify-content: flex-start;
+  height: 1.25rem;
+}
+html .weather-first-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.7rem;
+  height: 1.25rem;
+}
+html #weather-temp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fcf5f4;
+  font-size: 0.8rem;
+  height: 1.25rem;
+}
+html #weather-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #76f5f5;
+  font-size: 0.5rem;
+  height: 1.25rem;
+  padding: 0 0.1rem 0 0;
+}
+html .weather-second-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.7rem;
+  height: 1.25rem;
+}
+html #weather-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-self: center;
+  color: #fcf5f4;
+  font-size: 0.5rem;
+  width: 3.7rem;
+  height: 1.25rem;
+  color: #76f5f5;
+}
+html .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 900, "GRAD" -25, "opsz" 20;
+}
+html .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 900, "GRAD" -25, "opsz" 20;
+}
+
+@keyframes heart-beat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes spinnerz {
+  0% {
+    border-color: #d6675d;
+  }
+  25% {
+    border-color: #f56262;
+  }
+  50% {
+    border-color: #e47ac5;
+  }
+  75% {
+    border-color: #58ce0a;
+  }
+  100% {
+    border-color: #d6675d;
+  }
+}/*# sourceMappingURL=style.css.map */

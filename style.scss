@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+//colors variety
+$red-ring: #d6675d;
+$red-heart: #c4544a;
+$red-maybe: #f56262;
+$blue-color: #76f5f5;
+$white: #fcf5f4;
+$clock-face-b900: #2d2c2c;
+$clock-border-b600: #5d5d5d;
+$background-b400: #888888;
+$lime-green: #58ce0a;
+$violet-pink: #e47ac5;
+
+html {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25rem;
+        height: 25rem;
+        background-color: $clock-border-b600;
+    }
+    .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $clock-face-b900;
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        border: 0.5rem solid $background-b400;
+        z-index: -2;
+    }
+    .watch-face {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 50%;
+        width: 90%;
+        height: 90%;
+        border: dotted $white 0.3rem;
+    }
+    .spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        height: 95%;
+        background-color: transparent;
+        border-radius: 50%;
+        border: 0.2rem solid $red-ring;
+        animation: spinnerz 12s linear infinite;
+        z-index: -1;
+    }
+
+    // items inside watch
+    .items-inside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    //1 line
+    .day {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: $violet-pink;
+    }
+    #date {
+        color: $lime-green;
+    }
+
+    //2 line
+    .time {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    // 3 line
+    .puls-and-weather {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 1.25rem;
+    }
+
+    //only puls and heart icon
+    .only-heart-puls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.25rem;
+    }
+    #heart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $red-maybe;
+        font-size: 0.5rem;
+        height: 1.25rem;
+        animation: ease-in heart-beat 1300ms infinite;
+    }
+    .puls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0.5rem 0 0.1rem;
+        font-size: 0.8rem;
+        align-self: center;
+        justify-content: flex-start;
+        height: 1.25rem;
+    }
+
+    // weather icon and degree
+    .weather-first-step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.7rem;
+        height: 1.25rem;
+    }
+    #weather-temp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 0.8rem;
+
+        height: 1.25rem;
+    }
+    #weather-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $blue-color;
+        font-size: 0.5rem;
+        height: 1.25rem;
+        padding: 0 0.1rem 0 0;
+    }
+
+    // weather info flip
+    .weather-second-step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 3.7rem;
+        height: 1.25rem;
+    }
+    #weather-info {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-self: center;
+        color: $white;
+        font-size: 0.5rem;
+        width: 3.7rem;
+        height: 1.25rem;
+
+        color: $blue-color;
+    }
+
+    // addictional classes for icons
+    .material-symbols-outlined {
+        font-variation-settings:
+            "FILL" 0,
+            "wght" 900,
+            "GRAD" -25,
+            "opsz" 20;
+    }
+    .material-symbols-outlined {
+        font-variation-settings:
+            "FILL" 1,
+            "wght" 900,
+            "GRAD" -25,
+            "opsz" 20;
+    }
+}
+
+@keyframes heart-beat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes spinnerz {
+    0% {
+        border-color: $red-ring;
+    }
+    25% {
+        border-color: $red-maybe;
+    }
+    50% {
+        border-color: $violet-pink;
+    }
+    75% {
+        border-color: $lime-green;
+    }
+    100% {
+        border-color: $red-ring;
+    }
+}
